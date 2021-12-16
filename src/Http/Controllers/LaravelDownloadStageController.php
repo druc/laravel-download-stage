@@ -2,10 +2,18 @@
 
 namespace Druc\LaravelDownloadStage\Http\Controllers;
 
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Artisan;
 
 class LaravelDownloadStageController
 {
+    public function __construct()
+    {
+        if (App::isProduction()) {
+            abort(403);
+        }
+    }
+
     public function show()
     {
         return view('download-stage::download-stage');
