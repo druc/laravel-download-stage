@@ -15,7 +15,7 @@ class LaravelDownloadStageCommand extends Command
     {
         config()->set('backup.backup.source.files.include', [
             storage_path('/'),
-            public_path('/')
+            public_path('/'),
         ]);
 
         config()->set('backup.backup.source.files.relative_path', base_path());
@@ -24,7 +24,7 @@ class LaravelDownloadStageCommand extends Command
 
         $this->call('backup:run', [
             '--filename' => 'download-stage.zip',
-            '--disable-notifications' => true
+            '--disable-notifications' => true,
         ]);
 
         return self::SUCCESS;

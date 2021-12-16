@@ -29,4 +29,4 @@ class LaravelDownloadStageController
             return 'Well... something went wrong: '.$e->getMessage();
         }
     }
-} 
+}

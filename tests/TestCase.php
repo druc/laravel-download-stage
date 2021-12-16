@@ -2,9 +2,9 @@
 
 namespace Druc\LaravelDownloadStage\Tests;
 
+use Druc\LaravelDownloadStage\LaravelDownloadStageServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Druc\LaravelDownloadStage\LaravelDownloadStageServiceProvider;
 
 class TestCase extends Orchestra
 {
